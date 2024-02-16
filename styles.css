@@ -1,0 +1,299 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    text-align: center;
+    
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+
+
+.logo {
+    float: left;
+}
+.logo {
+    font-size: 24px; /* Adjust the font size based on your preference */
+    text-decoration: none;
+    color: #333; /* Adjust the color based on your preference */
+    font-weight: bold;
+    padding: 0px 3px; /* Adjust padding based on your preference */
+}
+
+.logo img {
+    max-width: 20%; /* Make sure the image doesn't exceed its container width */
+    height: auto; /* Maintain the image's aspect ratio */
+    display: block; /* Remove extra space under the image */
+}
+
+.contact {
+    float: right;
+}
+
+.contact a {
+    color: #3498db;
+}
+
+img.code-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ... (previous CSS content) ... */
+
+.container {
+    /* ... (previous styles) ... */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out,1s;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+.container.pop-up {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.container.pop-up:hover {
+    transform: scale(1.1);
+}
+
+.pop-up-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.pop-up-content h2 {
+    margin-bottom: 10px;
+}
+
+.pop-up-content p {
+    margin-bottom: 20px;
+}
+
+.pop-up-content.active {
+    display: block;
+}
+
+/* ... (previous CSS content) ... */
+
+/* ... (previous CSS content) ... */
+
+header {
+    background: #f0f0f083;
+    border-bottom: 1px solid #dddddd00;
+    padding: 20px;
+    text-align: center;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    
+}
+
+footer {
+    background: #f0f0f000;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #dddddd00;
+    border-radius: 10px;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+}
+
+/* ... (remaining CSS content) ... */
+
+/* ... (previous CSS content) ... */
+
+
+   /* ... (previous CSS content) ... */
+
+.container {
+    position: relative;
+    border: 1px solid #dddddd00;
+    border-radius: 10px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #ffffff00;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Inner shadow effect */
+    pointer-events: none; /* Ensure pseudo-element doesn't interfere with clicks */
+}
+
+
+
+img {
+    max-width: 100%; /* Make sure the image doesn't exceed the container width */
+    height: auto; /* Maintain the image's aspect ratio */
+    display: block; /* Remove extra space under the image */
+    margin: 0 auto; /* Center the image within the container */
+    border-radius: 8px; /* Match the container's border-radius for a cohesive look */
+}
+
+/* ... (previous CSS content) ... */
+
+.contact-button {
+    background-color: #3498db51; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Adjust padding for a comfortable button size */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.contact-button:hover {
+    background-color: #e2e7ea0d; /* Darker shade on hover */
+}
+
+/* Setting up a box to add the inner shadow to */
+/* Setting up a box to add the inner shadow to */
+
+.container p {
+    color: #060606ec;
+    font-size: 16px;
+    line-height: 1.5;
+}
+/* ... (previous CSS content) ... */
+
+.container, .abstract {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease, box-shadow 0.3s ease; /* Add transition for box-shadow */
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box-shadow */
+}
+
+.container:hover, .abstract:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* ... (remaining CSS content) ... */
